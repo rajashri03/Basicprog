@@ -6,9 +6,23 @@ namespace BasicCoreProgramming
     {
         static void Main(string[] args)
         {
-           HeadTails headTailsobj = new HeadTails();
-            headTailsobj.CheckHeadTails();
 
+            while (true)
+            {
+                Console.WriteLine("Select Option\n1)FlipCoin\n2)LeapYear");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        HeadTails headTailsobj = new HeadTails();
+                        headTailsobj.CheckHeadTails();
+                        break;
+                    case 2:
+                        LeapYear leap = new LeapYear();
+                        leap.FindLeapYEar();
+                        break;
+                }
+            }
         }
     }
 }
